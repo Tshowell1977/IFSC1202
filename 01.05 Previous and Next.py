@@ -4,4 +4,5 @@ n=x+1
 p=x-1
 a="The next number for the number"
 b="is"
-print(a+X+b+n+".")
+c= a + X + b + n + "."
+print(c)
