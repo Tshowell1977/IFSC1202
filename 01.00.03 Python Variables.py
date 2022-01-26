@@ -16,7 +16,7 @@ print(x)
 # using single or double quotes:
 
 x = "John"
-print(x)
+#print(x)
 # is the same as
 x = 'John'
 print(x)
