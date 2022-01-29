@@ -1,0 +1,5 @@
+N=input("Please enter a Number:")  
+td=(int(N)//10)
+od=(int(N)%10)
+print("Tens Digit: " + str(td))
+print("Ones Digit: " + str(od))
