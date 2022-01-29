@@ -1,0 +1,8 @@
+fN=input("Enter First 2 Digit Number:")
+sN=input("Enter Second 2 Digit Number:")  
+ftd=(int(fN)//10)
+fod=(int(fN)%10)
+std=(int(sN)//10)
+sod=(int(sN)%10)
+A="Tens Digit: " + str(ftd)+ str(std)+ str(fod)+ str(sod)
+print("{:s}".format (A))

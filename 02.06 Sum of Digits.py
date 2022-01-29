@@ -1,0 +1,7 @@
+N=input("Please enter a Number:")  
+hd=(int(N)//100)
+td=(int(N)//10%10)
+od=(int(N)%10)
+s=(hd + td + od)
+A=("Sum of Digits: ")+str(s)
+print("{:s}".format (A))

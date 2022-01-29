@@ -1,0 +1,5 @@
+N=input("Please enter a Number:")  
+td=(int(N)//10%10)
+od=(int(N)%10)
+A=("Last Two Digits:")+str(td) + str(od)
+print("{:s}".format (A))

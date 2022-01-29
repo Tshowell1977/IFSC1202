@@ -1,0 +1,7 @@
+N=input("Enter a 3 Digit Number:")  
+hd=(int(N)//100)
+td=(int(N)//10%10)
+od=(int(N)%10)
+s=str(od) + str(td) + str(hd)
+A=("Reverse of Digits: ")+(s)
+print("{:s}".format (A))
