@@ -3,12 +3,12 @@ U=str(input("Enter From Unit (in,ft,yd,mi):"))
 #print(N)
 #print(U)
 if U=="in" or U=="ft" or U=="yd" or U=="mi":
-    print("yes")
+    print()
 else:
     print("From Unit is not Valid.")
 UT=str(input("Enter To Unit (in,ft,yd,mi):"))
 if UT=="in" or UT=="ft" or UT=="yd" or UT=="mi":
-    print("yes")
+    print()
 else:
     print("From Unit is not Valid.")
 import math
@@ -59,9 +59,9 @@ if U=="mi" and UT=="yd":
 if U=="mi" and UT=="mi":
     conversion=N*1
 
-print(N)
-print(U)
-print(round(float(conversion),7))
-print(UT)
+#print(N)
+#print(U)
+#print(round(float(conversion),7))
+#print(UT)
 
-#Print(N + U +"==>"+ g + h)
+Print(N + U +"==>"+ g + h)
