@@ -11,19 +11,6 @@ for j in range(N-1):
   ct1+= count
   #print(ct1)
 
-
+#value of mmissing card
 d=ct-ct1
 print("Missing Card: " + str(d))
-  
-
-
-
-
-
-#sum of the values from 1 to N (Total Value of Cards)
-
-
-#sum of the values on remaining cards (sum of elements of array A)
-
-
-#value on the lost card
