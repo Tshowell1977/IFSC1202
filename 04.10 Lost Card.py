@@ -1,4 +1,4 @@
-N=int(input('Enter Number of Cards:'))
+N=int(input('Enter Number of Cards: '))
 ct=0
 #counting the total cards
 for i in range(1,N+1):
