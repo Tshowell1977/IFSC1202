@@ -1,12 +1,8 @@
 from random import randint
-
 name=input("Hello! What is your name?")
-
 print("Well,",name,", I am thinking of a number between 1 and 20.")
 print(" You have five guesses.")
-
 x = randint(1,20)
-
 ct=1
 for i in range(1,6):
     n = int(input("Take a guess:"))  
