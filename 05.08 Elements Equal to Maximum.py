@@ -1,14 +1,15 @@
-ct=1
-max=0
-while 1:
-    n = float(input("Enter a Value (zero to quit):"))  
-    if n ==0:
-        print("Maximum: ",max)
-        print("Number of occurences: ",ct)
+max = 0
+occured = 0
+fn = True
+while True:
+    n = int(input('Enter a Number (zero to quit): '))
+    if n == 0: 
         break
-    else:
-        if n==max:         
-            ct +=1
-        if n > max:
-            max=n
-       
+    if fn or max < n:
+        max = n
+        occured = 1
+    elif max == n:
+        occured += 1
+    fn = False
+print('Maximum:', max)
+print('Number of Occurrences:', occured)
