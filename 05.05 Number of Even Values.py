@@ -7,6 +7,6 @@ while 1:
         break
     else:
                 
-        if n/2 == 0:
+        if n%2 == 0:
             ct=ct+1
             
