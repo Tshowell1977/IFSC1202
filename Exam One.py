@@ -14,4 +14,4 @@ for i in range(1,6):
     if n >x:
         print("Your guess is too high.")
     ct+=1
-print ("Nope. The number I was thinking of was ",ct)
+print ("Nope. The number I was thinking of was",ct)
