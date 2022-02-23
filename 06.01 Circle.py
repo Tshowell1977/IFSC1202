@@ -1,27 +1,23 @@
 from math import pi
     
 def area(R):
-    A = float(math.pi*R^2)
-    Return (A)
-def Circumference(R):
-    C= float(math.pi*R*2)
-    Return (C)
+    A = float(pi*R*R)
+    return (A)
+def circumference(R):
+    C= float(pi*R*2)
+    return (C)
 def diameter(R):
     D = float(2*R)
-    Return (D)
+    return (D)
 
-
+print("{:>15s} {:>15s} {:>15s} {:>15s}".format("Radius","Diameter","Circumference","Area"))
 Radius = open("06.01 Radius.txt")
 
 R = Radius.readline()
 while R != "":
-
-
-	print(R)
-
-
-
-	R = Radius.readline()
+    RFP=float(R)
+    print("{:15.5f} {:15.5f} {:15.5f} {:15.5f}".format(RFP,diameter(RFP),circumference(RFP),area(RFP)))
+    R = Radius.readline()
 
 
 Radius.close()
