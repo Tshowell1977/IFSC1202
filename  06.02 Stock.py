@@ -12,7 +12,7 @@ for i in range(1,len(RC)):
 
     percentchange = ((RC[i] - RC[i-1])/RC[i-1]) * 100
 
-    print("{:15.2f} {:15.2f}".format(RC[i],percentchange))
+    print("{:15.2f} {:15.2f}%".format(RC[i],percentchange))
     
 
 Stock.close()
