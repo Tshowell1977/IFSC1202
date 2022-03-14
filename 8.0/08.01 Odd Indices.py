@@ -1,3 +1,5 @@
 s=[input(" Enter Values Seperated by Spaces:")]
-s=slice.s(" ")
-print (s[0])
+for i in range (len(s)):
+    #print []
+    if i % 2 == 1:
+        print [s]
