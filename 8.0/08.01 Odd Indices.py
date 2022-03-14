@@ -1,3 +1,3 @@
-s=input(" Enter Values Seperated by Spaces:")
-
-s[1::2]
+s=[input(" Enter Values Seperated by Spaces:")]
+s=slice.s(" ")
+print (s[0])
