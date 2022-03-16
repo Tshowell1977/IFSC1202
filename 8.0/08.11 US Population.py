@@ -13,9 +13,9 @@ for i in range(41):
         list_change.append(change)
         percent_change=round((change/list_population[i-1])*100,2)
         list_percent.append(percent_change)
-        j=0
+j=0
 
-        print("Year\t\tPopulation\t\tChnage\t\tPercent Change")
+print("Year\t\tPopulation\t\tChnage\t\tPercent Change")
 for year in range(1950,1991):
     if(j==0):
         print(year,"\t\t",list_population[j],"\t\t","N/A","\t\t","N/A")
