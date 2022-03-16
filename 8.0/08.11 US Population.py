@@ -9,7 +9,7 @@ file.close()
 
 for i in range(41):
     if(i>=1):
-        change=list_population[i]-list_population[i-1]
+        change = list_population[i]-list_population[i-1]
         list_change.append(change)
         percent_change=round((change/list_population[i-1])*100,2)
         list_percent.append(percent_change)
