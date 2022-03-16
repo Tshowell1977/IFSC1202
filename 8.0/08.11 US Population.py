@@ -1,53 +1,40 @@
-def main():
-    yearly_change = []
-    change=0.0
-    total_change=0
-    average_change=0
-    greatest_increase=0
-    smallest_increase=0
-    greatest_year=0
-    smallest_year=0
-    BASE_YEAR=1950
-    try:
-        input_file = open("08.11 USPopulation.txt", "r")
-        
-        yearly_population= input_file.readlines()
-       
-        for i in range(len(yearly_population)):
-            yearly_population[i] = float(yearly_population[i])
-        
-        for i in range(1,len(yearly_population)):
-            change = yearly_population[i] - yearly_population[i-1]
-            yearly_change.append(change) 
-
-            
-            if i==1:
-                greatest_increase = change
-                smallest_increase = change
-                greatest_year = 1
-                smallest_year = 1
-           
-            else:
-                if change>greatest_increase:
-                    greatest_increase = change
-                    greatest_year = i
-                elif change<smallest_increase:
-                    smallest_increase = change
-                    smallest_year = i
-            total_change = float(sum(yearly_change))
-            average_change = total_change/40
-            print("The average annual change in population during the time period is",\
-                  format(average_change, '.2f'))
-            print("The year with the greatest increase in population was",
-BASE_YEAR+greatest_year)
-            print("The year with the smallest increase in population was",
-BASE_YEAR+smallest_year)
-            input_file.close()
-    except IOError:
-        print("The file could not be found")
-    except IndexError:
-        print("There was an indexing error")
-    except:
-        print("An error occurred")
-
-main()
+list_population=[]
+list_change=[0]
+list_percent=[0]
+#reading file and populating to list
+file=open('08.11 USPopulation.txt','r')
+for i in file:
+    list_population.append(int(i)*1000)
+file.close()
+#calculating change and percent change
+for i in range(41):
+    if(i>=1):
+        change=list_population[i]-list_population[i-1]
+        list_change.append(change)
+        percent_change=round((change/list_population[i-1])*100,2)
+        list_percent.append(percent_change)
+        j=0
+#printing the values in given format
+        print("Year\t\tPopulation\t\tChnage\t\tPercent Change")
+for year in range(1950,1991):
+    if(j==0):
+        print(year,"\t\t",list_population[j],"\t\t","N/A","\t\t","N/A")
+    else:
+        print(year,"\t\t",list_population[j],"\t\t",list_change[j],"\t",str(list_percent[j])+"%")
+    j+=1
+#finding the average max and min change and year
+average=sum(list_change)/41
+print("Average population change: ",change)
+maxi=list_change[1]
+mini=list_change[1]
+max_index=0
+min_index=0
+for i in range(2,len(list_change)):
+    if(list_change[i]>maxi):
+        maxi=list_change[i]
+        max_index=i
+    if(list_change[i]<mini):
+        mini=list_change[i]
+        min_index=i
+print("Maximum change and year: ",maxi,1950+max_index)
+print("Minimum change and year: ",mini,1950+min_index)
