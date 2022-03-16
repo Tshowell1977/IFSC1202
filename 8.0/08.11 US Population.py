@@ -2,7 +2,7 @@ list_population=[]
 list_change=[0]
 list_percent=[0]
 
-file=open("08.11 USPopulation.txt","r")
+file = open("08.11 USPopulation.txt","r")
 for i in file:
     list_population.append(int(i)*1000)
 file.close()
