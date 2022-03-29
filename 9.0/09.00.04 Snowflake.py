@@ -1,4 +1,4 @@
-# Input the size of the snowflake
+6# Input the size of the snowflake
 n = int(input("Enter the size of the snowflake:"))
 # Create the array - initialize with a space
 a = []
