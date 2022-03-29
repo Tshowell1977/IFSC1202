@@ -23,7 +23,7 @@ for i in range(1,len(table)):
         flag = 1
         break
 if(flag==1):
-    flag = 0#resetting the flag
+    flag = 0
     for i in range(1,len(table[0])):
         if(table[0][i]==to_unit):
             to_unit_index = i
@@ -34,6 +34,6 @@ if(flag==1):
         ans = round(ans,7)
         print(ans)
     else:
-        print("ToUnit is not valid")
+        print("To Unit is not valid")
 else:
-    print("FromIndex is not valid")
+    print("From Index is not valid")
