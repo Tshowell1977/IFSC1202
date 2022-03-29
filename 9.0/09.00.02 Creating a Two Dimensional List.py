@@ -1,7 +1,7 @@
 # Create the array
 a = []
 # Open the file and read the first line`
-numbersfile = open("09.00.02 NumbersList.txt")
+numbersfile = open("/workspace/IFSC1202/9.0/09.00.02 NumbersList.txt")
 x = numbersfile.readline()
 # While not at end of file
 while x != "":
