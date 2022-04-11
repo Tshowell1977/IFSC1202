@@ -12,15 +12,13 @@ class RetailItem:
 
         return (self.UnitOnHand * self.Price)
 
-#open file
+
 
 f = open('/workspace/IFSC1202/10.02 Inventory.txt')
 
-#create a list to hold objects of RetailItem
 
 list = []
 
-#read data from txt and store it
 
 for i in f:
 
@@ -29,16 +27,12 @@ for i in f:
     
     list.append(RetailItem(data[0],int(data[1]),float(data[2])))
 
-#print header
-
 print("{:>11} {:>17} {:>17} {:>17}".format("Description","Unit On Hand","Price","Inventory Value"))
 
-#print data
 
 for obj in list:
 
     print("{:>11} {:>17} {:>17} {:>17}".format(obj.Description,obj.UnitOnHand,obj.Price,'%.2f'%obj.InventoryValue()))
 
-#close file
 
 f.close()
