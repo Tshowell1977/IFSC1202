@@ -15,3 +15,14 @@ print("{:>11} {:>17} {:>17} {:>17}".format("Description","Unit On Hand","Price",
 for obj in list:
   print("{:>11} {:>17} {:>17} {:>17}".format(obj.Description,obj.UnitOnHand,obj.Price,'%.2f'%obj.InventoryValue()))
 f.close()
+
+f = open('/workspace/IFSC1202/11.01 InventoryUpdate.txt')
+for i in f:
+  line = i.replace('\n','')
+  data = line.split(', ')
+  list.append(RetailItem(data[0],' ',float(data[1])))
+  
+print("{:>11} {:>17} {:>17} {:>17}".format("Description","Unit On Hand","Price","Inventory Value"))
+for obj in list:
+  print("{:>11} {:>17} {:>17} {:>17}".format(obj.Description,obj.UnitOnHand,obj.Price,'%.2f'%obj.InventoryValue()))
+f.close()
