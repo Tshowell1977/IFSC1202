@@ -23,20 +23,16 @@ class StudentList:
         for index, student in enumerate(self.student_list):
             if student.t_number == student_to_find:
                 return index
-        return -1  # can be any default value, but -1 reminds me of the default search function
+        return -1  
 
     def print_student_list(self):
-        # this statement gets all the variables associated with every
-        # student object and parses it to a pandas data frame
+        
         df = pd.DataFrame([vars(f) for f in self.student_list])
-        print(df.to_string(index=False))  # make use of the pandas library to do pretty printing
-
+        print(df.to_string(index=False))  
     def add_student_from_file(self, file_name):
-        # read_csv function obtains the data (in csv format) and makes it so it
-        # can be used as a convenient python object
+        
         df = pd.read_csv(file_name, names=["first_name", "last_name", "t_number"])
-        # iterating over a pandas data frame is not an efficient way
-        # check out vectorization
+        
         for index, row in df.iterrows():
             self.add_student(row['first_name'], row['last_name'], row['t_number'])
 
@@ -65,8 +61,7 @@ class CourseList:
 
     def add_course_from_file(self, file_name):
         df = pd.read_csv(file_name, names=["department", "number", "name", "room", "meeting_times"])
-        # iterating over a pandas data frame is not an efficient way
-        # check out vectorization
+       
         for index, row in df.iterrows():
             self.add_course(row["department"], row["number"], row["name"], row["room"], row["meeting_times"])
 
@@ -78,7 +73,7 @@ def main():
     student_list = StudentList()
     student_list.add_student_from_file('/workspace/IFSC1202/11.03 Students.txt')
 
-    # pandas helps us to obtain data with ease from the .txt file
+    
     df = pd.read_csv('/workspace/IFSC1202/11.03 Registration.txt', names=["t_number", "department", "number"])
     for index, row in df.iterrows():
         t_number, department, number = row['t_number'], row['department'], row['number']
