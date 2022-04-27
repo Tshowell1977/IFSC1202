@@ -20,8 +20,8 @@ def main():
             line = line[:-1].split(",")
             houseobj = House(line[0],float(line[1]),float(line[2]))
             HouseList.append(houseobj)
-        interestrate = float(input("Enter interest rate :\n "))
-        years = float(input("Enter years of Mortgage : \n"))
+        interestrate = float(input("Enter interest rate :"))
+        years = float(input("Enter years of Mortgage : "))
         print("\nOUTPUT : \n\n\tAddress\t\t\tSq Ft\tSqFt Cost\tPrice\t\tPayment")
         for house in HouseList:
             print("\t{:s}\t\t{:.0f}\t{:.2f}\t\t{:.0f}\t\t{:.2f}".format(house.address,house.sqft,house.costpersqft(),(house.price),house.payment(interestrate,years)))
